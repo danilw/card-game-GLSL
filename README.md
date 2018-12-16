@@ -10,7 +10,7 @@ Launch problem - *very* long compile time in webbrowser, Windows(webbrowsers wit
 
 **Webbrowser safe option** launch it from shadertoy [link](https://www.shadertoy.com/view/4lKBWh)
 
-**unsafe** (safe for Linux users, and webbrowsers that disable Angle) click [link](https://danilw.github.io/card-game-GLSL/wasm_def/glsl_v2.html
+**unsafe** (safe for Linux users, and webbrowsers that disable Angle) click [link](https://danilw.github.io/card-game-GLSL/wasm_def/glsl_v2.html)
 
 ### Video
 [![crd](https://danilw.github.io/card-game-GLSL/yt.png))](https://youtu.be/xMTVUL1_10M)

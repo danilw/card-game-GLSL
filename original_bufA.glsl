@@ -1,7 +1,7 @@
 // Created by Danil (2018)
 // License Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
 
-// self https://www.shadertoy.com/view/4lKBWh
+// self https://www.shadertoy.com/view/wdlGz8
 
 // using http://www.iquilezles.org/www/articles/distfunctions2d/distfunctions2d.htm
 // using https://www.shadertoy.com/view/llyXRW

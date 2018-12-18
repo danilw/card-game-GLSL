@@ -13,7 +13,7 @@ original "single shader" variant [Windows_64bit(original)](https://danilw.github
 
 **Webbrowser safe option** launch it from shadertoy [link](https://www.shadertoy.com/view/wdlGz8)
 
-**unsafe** (safe for Linux users, and webbrowsers that disable Angle) click [link](https://danilw.github.io/card-game-GLSL/wasm_def/glsl_v2.html)
+**unsafe** (safe for Linux users, and webbrowsers that disable Angle) click [optimized(~5 sec compile time](https://danilw.github.io/card-game-GLSL/wasm_def/glsl_v2.html) [original(~30 sec compile time](https://danilw.github.io/card-game-GLSL/wasm_def_orig/glsl_v2.html)
 
 ### Performance
 

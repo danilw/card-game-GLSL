@@ -338,13 +338,13 @@ float text_n(vec2 U, float num) {
 // to load card pixels only when we need it without reading 20 pixels for every pixel, if use it in load_state
 
 vec4 load_card(int idx) {
-    vec2 id = vec2(0, idx) + 0.5;
-    return texture(iChannel0, (id) / iResolution.xy);
+    ivec2 id = ivec2(0, idx) ;
+    return texelFetch(iChannel0, (id) , 0  );
 }
 
 vec4 load_card2(int idx) {
-    vec2 id = vec2(1, idx) + 0.5;
-    return texture(iChannel0, (id) / iResolution.xy);
+    ivec2 id = ivec2(1, idx);
+    return texelFetch(iChannel0, (id) , 0 );
 }
 
 
@@ -496,18 +496,18 @@ vec3 get_cardcolor(vec2 p, int id, bool vb) {
 // same as load_card logic
 
 vec4 load_board(int idx) {
-    vec2 id = vec2(3, idx) + 0.5;
-    return texture(iChannel0, (id) / iResolution.xy);
+    ivec2 id = ivec2(3, idx);
+    return texelFetch(iChannel0, (id) , 0 );
 }
 
 vec4 load_board2(int idx) {
-    vec2 id = vec2(4, idx) + 0.5;
-    return texture(iChannel0, (id) / iResolution.xy);
+    ivec2 id = ivec2(4, idx);
+    return texelFetch(iChannel0, (id) , 0 );
 }
 
 vec4 load_eff_buf() {
-    vec2 id = vec2(2, 3) + 0.5;
-    return texture(iChannel0, (id) / iResolution.xy);
+    ivec2 id = ivec2(2, 3) ;
+    return texelFetch(iChannel0, (id) , 0 );
 }
 
 vec3 get_boardccolor(vec2 p, int id, bool vb) {
@@ -2023,19 +2023,19 @@ void hpmp_logic(out vec4 fragColor, in vec2 fragCoord, ivec2 ipx) {
 
 void load_state(in vec2 fragCoord, bool ctrl) {
     vec2 uv = fragCoord / iResolution.xy;
-    vec4 px = texture(iChannel0, vec2(2.5, 0.5) / iResolution.xy);
+    vec4 px = texelFetch(iChannel0, ivec2(2, 0), 0);
     float cards_player = floor(px.x);
     float flag0 = floor(px.y);
     float cards_player_atime = (px.z);
     float cards_player_select = floor(px.w);
-    px = texture(iChannel0, vec2(2.5, 2.5) / iResolution.xy);
+    px = texelFetch(iChannel0, ivec2(2, 2), 0);
     float card_put_anim = (px.x);
     float card_hID_put_anim = floor(px.y);
     float card_bID_put_anim = floor(px.z);
     float flag1 = floor(px.w);
     vec2 click_pos = vec2(0.);
     float card_select_anim;
-    px = texture(iChannel0, vec2(2.5, 4.5) / iResolution.xy);
+    px = texelFetch(iChannel0, ivec2(2, 4), 0);
     vec3 tvg = decodeval(px.x);
     vec2 player_hpmp = tvg.yz;
     bool player_etf = tvg.x == 1.;
@@ -2065,23 +2065,24 @@ void load_state(in vec2 fragCoord, bool ctrl) {
         if ((flag3 == 0.)&&(anim_t == 0.)&&(anim_t2 == 0.)) { //do not update mouse if anim played
             click_pos = click_control();
             if ((player_hpmp.y > 0.)&&((card_get_hit(click_pos) >= 0) || (hpmp_get_hit(click_pos) > 0))) {
-                px = texture(iChannel0, vec2(2.5, 1.5) / iResolution.xy);
+                px = texelFetch(iChannel0, ivec2(2, 1), 0);
                 card_select_anim = px.z;
             } else card_select_anim = g_time;
         } else {
             card_select_anim = g_time;
         }
     } else {
-        px = texture(iChannel0, vec2(2.5, 1.5) / iResolution.xy);
+        px = texelFetch(iChannel0, ivec2(2, 1), 0);
         card_select_anim = px.z;
         click_pos = px.xy;
     }
-    px = texture(iChannel0, vec2(2.5, 1.5) / iResolution.xy);
+    px = texelFetch(iChannel0, ivec2(2, 1), 0);
     float card_draw = floor(px.w);
     if(flag3==1.)card_draw=0.;
     allData = allData_struc(cards_player, card_select_anim, cards_player_atime, click_pos, -1., cards_player_select, card_put_anim, card_hID_put_anim, card_bID_put_anim, flag1, flag0,
             player_hpmp, en_hpmp, flag3, egt, card_draw, player_turn, ett, player_etf, en_etf);
 }
+
 
 // save state used pixels, to [0-5,0-10]
 // pixel [0,0-9] <x> player cards player

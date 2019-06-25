@@ -19,6 +19,8 @@ original "single shader" variant [Windows_64bit(original)](https://danilw.github
 
 Good, launching from OpenGL launcher or in the Linux, I have max 50% GPU use on full screen(Nvidia 750).
 
+### Contact: [**Join discord server**](https://discord.gg/JKyqWgt)
+
 ### Video
 [![crd](https://danilw.github.io/card-game-GLSL/yt.png))](https://youtu.be/xMTVUL1_10M)
 

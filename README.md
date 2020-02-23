@@ -7,7 +7,7 @@
 
 Launch problem - *very* long compile time in webbrowser, Windows(webbrowsers with Angle) need 5+min to compile it(or can not compile at all)
 
-**new Windows exe** this shader buildin to Vulkan app, [70kb size link](https://www.pouet.net/prod.php?which=84806)
+**new Windows exe** this shader buildin to Vulkan app, [70kb exe link](https://www.pouet.net/prod.php?which=84806)
 
 **for Windows users**, best option to launch it download this OpenGL launcher **[Windows_64bit](https://danilw.github.io/card-game-GLSL/win_64.zip)** and launch it, compile time will be ~5-10 sec *(this is optimized version for fast compile)*
 

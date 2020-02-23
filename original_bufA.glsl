@@ -2019,6 +2019,16 @@ void hpmp_logic(out vec4 fragColor, in vec2 fragCoord, ivec2 ipx) {
     return;
 }
 
+//fix 2020
+int hpmp_get_hit_preinit(vec2 p, bool player_etf) {
+    if ((player_etf) || (player_etf))return -1;
+    vec2 pt = vec2(p.x - 0.18 / 2. - 0.18 * 3., abs(p.y - 0.01) - 0.125 - zv / 2.);
+    bool bv = (p.y - 0.02 < 0.);
+    float dz = hp_s2(pt + (bv ? 1. : -1.) * vec2(0., 0.015));
+    if (dz < 1.)return bv ? 6 : 16;
+    return -1;
+}
+
 // load last state
 
 void load_state(in vec2 fragCoord, bool ctrl) {
@@ -2064,7 +2074,7 @@ void load_state(in vec2 fragCoord, bool ctrl) {
         float anim_t = get_animstate(clamp(1. - (g_time - cards_player_atime), 0., 1.));
         if ((flag3 == 0.)&&(anim_t == 0.)&&(anim_t2 == 0.)) { //do not update mouse if anim played
             click_pos = click_control();
-            if ((player_hpmp.y > 0.)&&((card_get_hit(click_pos) >= 0) || (hpmp_get_hit(click_pos) > 0))) {
+            if ((player_hpmp.y > 0.)&&((card_get_hit(click_pos) >= 0) || (hpmp_get_hit_preinit(click_pos,player_etf) > 0))) {
                 px = texelFetch(iChannel0, ivec2(2, 1), 0);
                 card_select_anim = px.z;
             } else card_select_anim = g_time;

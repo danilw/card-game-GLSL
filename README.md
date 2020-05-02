@@ -17,6 +17,8 @@ original "single shader" variant [Windows_64bit(original)](https://danilw.github
 
 **unsafe** (safe for Linux users, and webbrowsers that disable Angle *chrome.exe --use-angle=gl*) click **[optimized](https://danilw.github.io/card-game-GLSL/wasm_def/glsl_v2.html)**(~5 sec compile time) or [original](https://danilw.github.io/card-game-GLSL/wasm_def_orig/glsl_v2.html)(~30 sec compile time)
 
+*unrolled* code exist for test, in Vulkan it show bug in AMD hardware, [download exe with it from here](https://community.amd.com/thread/248773#comment-2970255).
+
 ### Performance
 
 Good, launching from OpenGL launcher or in the Linux, I have max 50% GPU use on full screen(Nvidia 750).

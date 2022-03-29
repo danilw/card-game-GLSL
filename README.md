@@ -7,7 +7,9 @@ ___
 
 # Play
 
-### Web version: (**shadertoy links**, _after loading_ delete `#define NOCOMPILE` in Common to launch)
+### Web version: 
+
+(**shadertoy links**, _after loading_ delete `#define NOCOMPILE` in Common to launch)
 
 * **Web [Card game glal (optimized)](https://www.shadertoy.com/view/wdlGz8)** ~5 sec compile time.
 * Original [Card game in the single shader](https://www.shadertoy.com/view/3sX3zN), may not work because too long compile time.
@@ -15,7 +17,7 @@ ___
 
 ### Binary (exe) version:
 
-* **[Vulkan version Card game glal (exe)](https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/upl_demos/card_game_glsl.zip)** include Linux and Windows versions, _this is best option for modern PC_.
+* **[Vulkan version Card game glal (exe)](https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/upl_demos/card_game_glsl.zip)** include **Linux and Windows versions**, _this is best version to download for modern PC_.
 * Old [OpenGL version (exe)](https://danilw.github.io/card-game-GLSL/win_64.zip), WIndows only.
 ___
 

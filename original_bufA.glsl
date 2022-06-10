@@ -1133,7 +1133,7 @@ void init_globals() {
 }
 
 vec2 click_control() {
-    return (iMouse.zw) / iResolution.y - res_g / 2.0;
+    return abs(iMouse.zw) / iResolution.y - res_g / 2.0;
 }
 
 float get_card_col(int id) {

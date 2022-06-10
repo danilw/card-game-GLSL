@@ -8,7 +8,7 @@
 #define u_resolution (iResolution.xy)
 #define u_mouse iMouse
 #define u_texture1 iChannel0
-#define u_tex_texture1 iChannel1
+#define u_tex_texture1 iChannel3
 lowp float tmpvar_1;
 lowp float tmpvar_2;
 lowp float tmpvar_3;
@@ -158,7 +158,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
       )));
       if ((((flag3_33 == 0.0) && (tmpvar_57 == 0.0)) && (tmpvar_56 == 0.0))) {
         lowp vec2 tmpvar_59;
-        tmpvar_59 = ((u_mouse.zw / u_resolution.y) - (res_g / 2.0));
+        tmpvar_59 = (abs(u_mouse.zw / u_resolution.y) - (res_g / 2.0));
         click_pos_41 = tmpvar_59;
         bool tmpvar_60;
         if ((retc_53.z > 0.0)) {

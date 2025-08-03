@@ -2,7 +2,12 @@
 
 **what is it** card game that I write, full logic and graphic of this game in the single GLSL shader, source code in the *original_bufA.glsl* file
 
-### Contact: [**Join discord server**](https://discord.gg/JKyqWgt)
+___
+
+### Contact with me:
+
+**Matrix-chat room `#Shadertoy:envs.net` invite link** [matrix.to](https://matrix.to/#/#Shadertoy:envs.net) *(use web UI Element if you dont have acc)*
+
 ___
 
 # Play
